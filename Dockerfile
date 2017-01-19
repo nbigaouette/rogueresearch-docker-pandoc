@@ -1,0 +1,16 @@
+# Start from an Ubuntu 16.04 image
+FROM ubuntu:16.04
+
+MAINTAINER Nicolas Bigaouette <nbigaouette@rogue-research.com>
+
+# Update apt-get's database
+RUN apt-get --quiet --yes update
+
+# Install packages
+RUN apt-get --quiet --yes install \
+    wget unzip git-core tree openssh-client \
+    pandoc texlive
+
+# Clean up
+RUN apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
