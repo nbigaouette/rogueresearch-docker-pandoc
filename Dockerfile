@@ -9,7 +9,8 @@ RUN apt-get --quiet --yes update
 # Install packages
 RUN apt-get --quiet --yes install \
     wget unzip git-core tree openssh-client \
-    pandoc texlive python-pandocfilters python3-pandocfilters
+    pandoc texlive texlive-latex-extra \
+    python-pandocfilters python3-pandocfilters
 
 # Clean up
 RUN apt-get clean && \
