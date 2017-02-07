@@ -10,7 +10,7 @@ RUN apt-get --quiet --yes update
 RUN apt-get --quiet --yes install \
     wget unzip git-core tree openssh-client \
     pandoc texlive texlive-latex-extra texlive-luatex texlive-xetex \
-    texlive-science texlive-fonts-recommended texlive-fonts-extra texlive-math-extra \
+    texlive-science texlive-fonts-recommended texlive-fonts-extra texlive-htmlxml texlive-math-extra fonts-arkpandora \
     python-pandocfilters python3-pandocfilters
 
 # Clean up
